@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Atelier AI - Personal Profile</title>
+<!-- Google Fonts: Bodoni Moda for display, DM Sans for body -->
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#271900",
+                    "on-secondary-fixed-variant": "#464745",
+                    "surface-container-low": "#f5f3f3",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-background": "#1b1c1c",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#626361",
+                    "secondary-container": "#e0e0dd",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "surface-container": "#efeded",
+                    "on-surface-variant": "#444748",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fbf9f9",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#e3e2e0",
+                    "background": "#fbf9f9",
+                    "surface": "#fbf9f9",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#474746",
+                    "inverse-surface": "#303031",
+                    "on-tertiary-fixed": "#271900",
+                    "inverse-primary": "#c8c6c5",
+                    "on-secondary-fixed": "#1a1c1a",
+                    "surface-tint": "#5f5e5e",
+                    "on-tertiary-container": "#9e7f4a",
+                    "primary": "#000000",
+                    "primary-fixed": "#e5e2e1",
+                    "tertiary-fixed": "#ffdeaa",
+                    "primary-container": "#1c1b1b",
+                    "on-surface": "#1b1c1c",
+                    "secondary-fixed-dim": "#c7c6c4",
+                    "surface-container-high": "#e9e8e7",
+                    "surface-dim": "#dbdad9",
+                    "secondary": "#5e5f5d",
+                    "tertiary": "#000000",
+                    "on-tertiary-fixed-variant": "#5b4313",
+                    "on-primary-container": "#858383",
+                    "surface-container-highest": "#e4e2e2",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "tertiary-fixed-dim": "#e6c185",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "section-padding": "120px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Bodoni Moda"],
+                    "body-md": ["DM Sans"],
+                    "display-lg": ["Bodoni Moda"],
+                    "headline-lg": ["Bodoni Moda"],
+                    "label-caps": ["DM Sans"],
+                    "body-lg": ["DM Sans"],
+                    "headline-md": ["Bodoni Moda"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-transition {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .focus-ring:focus {
+            outline: none;
+            border-bottom-color: #000000;
+        }
+        .image-drop-area {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23C4C7C7' stroke-width='1' stroke-dasharray='4%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md overflow-x-hidden antialiased">
+<!-- TopAppBar Section -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+<button class="text-primary dark:text-on-background hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="font-display-lg-mobile text-headline-md tracking-tighter text-primary dark:text-on-background uppercase">
+                ATELIER AI
+            </div>
+<button class="text-primary dark:text-on-background hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<main class="min-h-screen pt-24 pb-section-padding flex flex-col items-center">
+<!-- Progress Indicator -->
+<div class="w-full max-w-[480px] px-margin-mobile mb-12">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-caps text-label-caps text-secondary">STEP 01/04</span>
+<span class="font-label-caps text-label-caps text-primary">PROFILE</span>
+</div>
+<div class="w-full h-[2px] bg-outline-variant/30 overflow-hidden">
+<div class="w-1/4 h-full bg-primary transition-all duration-700 ease-out"></div>
+</div>
+</div>
+<!-- Form Canvas -->
+<div class="w-full max-w-[640px] px-margin-mobile text-center">
+<h1 class="font-display-lg-mobile text-display-lg-mobile mb-4">Tell us about you.</h1>
+<p class="text-secondary mb-12 max-w-md mx-auto">To curate your personal atelier experience, we need to understand your proportions and silhouette.</p>
+<form class="space-y-12 text-left" id="profile-form">
+<!-- Physical Attributes Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Height -->
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-secondary block mb-2 transition-colors group-focus-within:text-primary">HEIGHT (CM)</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-4 text-headline-md font-headline-md focus-ring transition-all placeholder:text-outline-variant" placeholder="175" required="" type="number"/>
+</div>
+<!-- Weight -->
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-secondary block mb-2 transition-colors group-focus-within:text-primary">WEIGHT (KG)</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-4 text-headline-md font-headline-md focus-ring transition-all placeholder:text-outline-variant" placeholder="70" required="" type="number"/>
+</div>
+</div>
+<!-- Photo Upload Section -->
+<div class="space-y-4">
+<label class="font-label-caps text-label-caps text-secondary block">YOUR SILHOUETTE</label>
+<div class="image-drop-area h-80 w-full relative group cursor-pointer flex flex-col items-center justify-center bg-surface-container-lowest transition-colors hover:bg-surface-container-low overflow-hidden">
+<input class="absolute inset-0 opacity-0 cursor-pointer z-10" id="photo-upload" type="file"/>
+<!-- Initial Placeholder State -->
+<div class="text-center flex flex-col items-center gap-4 transition-all duration-500" id="upload-placeholder">
+<div class="w-16 h-16 rounded-full border border-outline-variant flex items-center justify-center text-secondary group-hover:border-primary group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[32px]">add_a_photo</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md mb-1">Upload Your Photo</p>
+<p class="font-label-caps text-label-caps text-secondary">DRAG &amp; DROP OR CLICK TO BROWSE</p>
+</div>
+</div>
+<!-- Image Preview State (Hidden by default) -->
+<img class="hidden absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional full-body studio photograph of a person in minimalist neutral clothing against a soft ivory backdrop. The lighting is high-key and elegant, casting gentle shadows that define the subject's form. This visual represents a high-end editorial fashion aesthetic, emphasizing clean lines and a sophisticated atmosphere. The color palette is monochromatic with warm undertones, perfectly matching a luxury boutique's minimalist design language." id="image-preview" src=""/>
+</div>
+<div class="flex items-start gap-3 p-4 bg-surface-container-low/50">
+<span class="material-symbols-outlined text-secondary text-[20px]">info</span>
+<p class="text-body-md text-secondary leading-tight">
+                            A full-body photo works best for our AI. Please ensure you are wearing fitted clothing and the lighting is clear.
+                        </p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col md:flex-row gap-4 pt-8">
+<button class="flex-1 py-5 border border-primary font-label-caps text-label-caps text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 uppercase tracking-widest" type="button">
+                        Back
+                    </button>
+<button class="flex-[2] py-5 bg-primary text-on-primary font-label-caps text-label-caps hover:opacity-90 transition-all duration-300 shadow-sm uppercase tracking-widest flex items-center justify-center gap-2" type="submit">
+                        Analyze My Style
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="w-full pt-section-padding pb-8 bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="flex flex-col items-center gap-unit px-margin-mobile text-center">
+<div class="font-display-lg text-headline-md text-primary mb-4">ATELIER AI</div>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest" href="#">Privacy</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest" href="#">Terms</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest" href="#">Contact</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors uppercase tracking-widest" href="#">Editorial</a>
+</div>
+<p class="font-label-caps text-label-caps text-secondary opacity-50 uppercase tracking-widest">
+                © 2024 ATELIER AI. ALL RIGHTS RESERVED.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple Image Preview Interaction
+        const fileInput = document.getElementById('photo-upload');
+        const preview = document.getElementById('image-preview');
+        const placeholder = document.getElementById('upload-placeholder');
+
+        fileInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.classList.remove('hidden');
+                    placeholder.classList.add('opacity-0');
+                    setTimeout(() => {
+                        placeholder.classList.add('hidden');
+                    }, 500);
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Form Submission Micro-interaction
+        document.getElementById('profile-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            // Visual feedback
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> ANALYZING...';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                // Mimic transition to next step
+                document.body.style.opacity = '0';
+                setTimeout(() => {
+                    alert('Data captured. Proceeding to style analysis...');
+                    btn.innerHTML = originalText;
+                    btn.style.opacity = '1';
+                    btn.disabled = false;
+                    document.body.style.opacity = '1';
+                }, 500);
+            }, 2000);
+        });
+    </script>
+</body></html>
